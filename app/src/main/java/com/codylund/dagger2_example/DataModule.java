@@ -8,11 +8,11 @@ import com.codylund.dagger2_example.weather.IWeatherRequestFactory;
 import dagger.Module;
 import dagger.Provides;
 
+/**
+ * Generalizes the data/util objects for the view controller.
+ */
 @Module
 public class DataModule {
-
-    private static final String TAG = DataModule.class.getName();
-
     @Provides
     static IWeatherRequestFactory providesWeatherRequestFactory(DarkSkyWeatherRequestFactory darkSkyWeatherRequestFactory) {
         return darkSkyWeatherRequestFactory;

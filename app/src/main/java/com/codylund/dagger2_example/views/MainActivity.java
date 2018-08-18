@@ -6,7 +6,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codylund.dagger2_example.viewcontrollers.IMainViewController;
-import com.codylund.dagger2_example.viewcontrollers.MainViewController;
 import com.codylund.dagger2_example.R;
 
 import javax.inject.Inject;
@@ -19,8 +18,6 @@ import dagger.android.AndroidInjection;
 
 @Singleton
 public class MainActivity extends AppCompatActivity implements IMainView {
-
-    private static final String TAG = MainActivity.class.getName();
 
     @BindView(R.id.text) TextView temperatureView;
     @BindView(R.id.time) TextView timeView;
